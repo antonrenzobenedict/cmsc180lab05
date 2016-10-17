@@ -7,7 +7,12 @@ int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
     MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
-
+	
+		printf("%d %d %d",argv[0],argv[1],argv[2]);
+	 if(myrank == 0)
+	 {
+	 	
+	 }
     printf("Hello from processor %d of %d\n", myrank, nprocs);
 
     MPI_Finalize();
